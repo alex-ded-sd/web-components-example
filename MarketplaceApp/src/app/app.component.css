@@ -1,0 +1,9 @@
+.container {
+	display: flex;
+	align-items: center;
+}
+
+.actions-container {
+	max-width: 1200px;
+	margin: 100px;
+}

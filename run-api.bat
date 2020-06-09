@@ -1,0 +1,1 @@
+dotnet run -p Corrigo.Marketplace.Api\Corrigo.Marketplace.Api
