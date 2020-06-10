@@ -8,10 +8,10 @@ namespace Corrigo.Marketplace.Api.Services
 {
 	public class ActionsService
 	{
-		public IEnumerable<Metadata> GetPackagesMetadata()
+		private readonly string actionsPath = Path.Combine(Directory.GetCurrentDirectory(), "ActionsStore"); 
+		public IEnumerable<Metadata> GetActionsMetadata()
 		{
-			var path = Path.Combine(Directory.GetCurrentDirectory(), "ActionsStore");
-			foreach (var directory in Directory.EnumerateDirectories(path))
+			foreach (var directory in Directory.EnumerateDirectories(actionsPath))
 			{
 				var file = Directory.GetFiles(directory, "*.cmspec")
 					.FirstOrDefault();

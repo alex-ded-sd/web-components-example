@@ -8,7 +8,7 @@ export class SetBasePathInterceptor implements HttpInterceptor {
 	constructor() { }
 
 	intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-		const apiReq = req.clone({ url: `${environment.baseUrl}/api/${req.url}` });
+		const apiReq = req.clone({ url: `${environment.baseUrl}${req.url}` });
 		return next.handle(apiReq);
 	}
 }

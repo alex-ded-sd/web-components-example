@@ -1,4 +1,10 @@
-{
-	"step0.js": "corrigo-combobox",
-	"step1.js": "corrigo-input"
-}
+[
+	{
+		"stepName": "step1.js",
+		"elementName": "btap-first-step"
+	},
+	{
+		"stepName": "step2.js",
+		"elementName": "btap-second-step"
+	}
+]

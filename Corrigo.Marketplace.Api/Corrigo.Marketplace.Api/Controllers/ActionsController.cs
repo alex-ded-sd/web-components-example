@@ -19,7 +19,7 @@ namespace Corrigo.Marketplace.Api.Controllers
 		[HttpGet]
 		public IEnumerable<Metadata> Get()
 		{
-			return actionsService.GetPackagesMetadata();
+			return actionsService.GetActionsMetadata();
 		}
 	}
 }

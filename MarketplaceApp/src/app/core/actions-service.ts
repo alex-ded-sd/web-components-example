@@ -14,7 +14,7 @@ export class ActionsService {
 	constructor(private httpClient: HttpClient) { }
 
 	ladAllActions(): Observable<ActionModel[]> {
-		return this.httpClient.get<ActionModel[]>("actions")
+		return this.httpClient.get<ActionModel[]>("/api/actions")
 			.pipe(
 				switchMap(actions =>
 					from(actions)
@@ -22,7 +22,8 @@ export class ActionsService {
 							map(action => {
 								const newAction = { ...action };
 								newAction.logoPath = `${environment.baseUrl}${action.logoPath}`;
-								newAction.stepsPath = `${environment.baseUrl}${action.stepsPath}`;
+								//TODO remove
+								//newAction.stepsPath = `${environment.baseUrl}${action.stepsPath}`;
 								return newAction;
 							}),
 							toArray()

@@ -35,7 +35,9 @@ namespace Corrigo.Marketplace.Api
 			{
 				FileProvider = new PhysicalFileProvider(
 					Path.Combine(Directory.GetCurrentDirectory(), "ActionsStore")),
-				RequestPath = "/ActionsStore"
+				RequestPath = "/ActionsStore",
+				OnPrepareResponse = staticResponseContext =>
+					staticResponseContext.Context.Response.Headers.Add("Access-Control-Allow-Origin", "*")
 			});
 			app.UseCors(builder => builder
 				.AllowAnyOrigin()
