@@ -2,7 +2,7 @@
 
 ## How to run:
 
- node.js must be installed `https://nodejs.org/en/download/`
+ node.js must be installed https://nodejs.org/en/download/
 
  In repository folder run run-api.bat using cmd or powershell
 
