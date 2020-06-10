@@ -4,8 +4,12 @@
 
  node.js must be installed https://nodejs.org/en/download/
 
- In repository folder run run-api.bat using cmd or powershell
+ In repository folder double click run-api.bat
 
- In repository folder run run-ui.bat using cmd or powershell
+### First ui start
+ In repository folder double click run first-run-ui.bat
+ 
+### further ui starts
+ In repository folder double click run silent-run-ui.bat
 
  For correct stop frontend part of application focus on cmd or powershell window and press CTRL+C

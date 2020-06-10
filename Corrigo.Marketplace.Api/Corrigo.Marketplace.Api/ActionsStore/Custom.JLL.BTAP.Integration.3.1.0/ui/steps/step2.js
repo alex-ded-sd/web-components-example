@@ -12,7 +12,7 @@ btapSecondStepTemplate.innerHTML = `
 	<div class="second-step-wrapper">
         <label>
             <label for="email">Email</label>
-	    	<input id="email" type="email" action-item-name="email">
+	    	<input id="email" type="email" name="email">
 	    </label>
     </div>
   `;
@@ -23,7 +23,19 @@ class BTAPSecondStep extends HTMLElement {
     }
 
     connectedCallback() {
-        this.shadowRoot.appendChild(document.importNode(btapSecondStepTemplate.content, true))
+        const template = btapSecondStepTemplate.content.cloneNode(true);
+        const listenedElement = template.getElementById('email');
+        listenedElement.addEventListener('change', event => {
+            this.dispatchEvent(new CustomEvent('stepchange', {
+                bubbles: true,
+                detail: {
+                    name: event.target.name,
+                    value: event.target.value,
+                    override: true
+                }
+            }));
+        });
+        this.shadowRoot.appendChild(template);
     }
 }
 

@@ -22,7 +22,21 @@ class BTAPFirstStep extends HTMLElement {
 	}
 
 	connectedCallback() {
-		this.shadowRoot.appendChild(document.importNode(btapFirstStepTeplate.content, true))
+		const template = btapFirstStepTeplate.content.cloneNode(true);
+		const listenedElements = template.querySelectorAll('[type=radio]');
+		listenedElements.forEach(element => {
+			element.addEventListener('change', event => {
+				this.dispatchEvent(new CustomEvent('stepchange', {
+					bubbles: true,
+					detail: {
+						name: event.target.name,
+						value: event.target.value,
+						override: true
+					}
+				}));
+			});
+		});
+		this.shadowRoot.appendChild(template);
 	}
 }
 
