@@ -1,2 +1,2 @@
 cd MarketplaceApp
-ng serve -o
+npm i && ng serve -o
