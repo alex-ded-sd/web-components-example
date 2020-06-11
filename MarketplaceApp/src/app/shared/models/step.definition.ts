@@ -1,4 +1,5 @@
 export interface StepDefinition {
-	stepName: string;
+	scriptName: string;
+	stepCaption: string;
 	elementName: string;
 }

@@ -1,10 +1,12 @@
 [
 	{
-		"stepName": "step1.js",
+		"stepCaption": "Please, provide your email",
+		"scriptName": "step2.js",
 		"elementName": "btap-first-step"
 	},
 	{
-		"stepName": "step2.js",
+		"stepCaption": "Please, choose your subscription",
+		"scriptName": "step1.js",
 		"elementName": "btap-second-step"
 	}
 ]

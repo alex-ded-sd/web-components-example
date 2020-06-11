@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.corrigo.com/packaging/2020/03/cmspec.xsd">
+  <metadata>
+    <id>Acumatica.Integration</id>
+    <version>1.0.0</version>
+    <authors>Corrigo Awesome Team</authors>
+    <owners>Corrigo Awesome Team</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://corrigo.com/enterprise/integration/jll/btap/LICENSE</licenseUrl>
+    <projectUrl>http://corrigo.com/enterprise/integration/jll/btap/DOCUMENTATION</projectUrl>
+    <description>Acumatica integration with Corrigo Enterprise</description>
+	<logoPath>/ui/acumaticabiglogo.jpg</logoPath>
+    <tags>JLL;BTAP;Enterprise</tags>
+    <dependencies>
+        <dependency id="Custom.JLL.E1.Integration" version="3.1.0" />
+    </dependencies>
+  </metadata>
+</package>

@@ -8,15 +8,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatGridListModule } from "@angular/material/grid-list";
 import { MatCardModule } from '@angular/material/card';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatButtonModule } from "@angular/material/button";
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatIconModule } from '@angular/material/icon';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 import { ActionsListComponent } from './actions-list/actions-list.component';
 import { ActionsService } from './core/actions-service';
 import { SetBasePathInterceptor } from './shared/interceptors/set-base-url-interceptor';
 import { ActionDetailComponent } from './action-detail/action-detail.component';
+import { WebComponentWrapperComponent } from './web-component-wrapper/web-component-wrapper.component';
 
 @NgModule({
 	declarations: [
-		AppComponent, ActionsListComponent, ActionDetailComponent
+		AppComponent, ActionsListComponent, ActionDetailComponent, WebComponentWrapperComponent
 	],
 	imports: [
 		BrowserModule,
@@ -24,7 +30,12 @@ import { ActionDetailComponent } from './action-detail/action-detail.component';
 		BrowserAnimationsModule,
 		MatGridListModule,
 		HttpClientModule,
-		MatCardModule
+		MatCardModule,
+		MatSliderModule,
+		MatButtonModule,
+		MatToolbarModule,
+		MatIconModule,
+		MatExpansionModule
 	],
 	providers: [
 		ActionsService,

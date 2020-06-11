@@ -1,8 +1,30 @@
+:host {
+	display: flex;
+}
 .action-card {
-	width: max-content;
+	margin: 20px 30px;
+	display: flex;
+	flex-direction: column;
+	width: 300px;
 }
 
-.mat-card-image {
-  max-width: 200px;
-  max-width: 200px;
+.action-buttons {
+	text-align: right;
+}
+
+.logo-image {
+	height: 200px;
+	width: 200px;
+}
+
+.logo-container {
+	display: flex;
+	justify-content: center;
+	margin: 0 10px;
+}
+
+.header-text {
+	width: 100%;
+	text-align: center;
+	margin: unset;
 }

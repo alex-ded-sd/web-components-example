@@ -1,15 +1,28 @@
 <ng-container *ngIf="(actionsService.allActions$ | async) as actions; else loadingTemplate">
-	<mat-grid-list [cols]="2" rowHeight="2:1" *ngFor="let action of actions">
-		<mat-card class="action-card">
-			<mat-card-header>
-				<mat-card-title [innerText]="action.id"></mat-card-title>
-			</mat-card-header>
-			<a [routerLink]="['/actions', action.id]"><img mat-card-image [src]="action.logoPath" alt=""></a>
-			<mat-card-content>
-				<p [innerText]="action.description"></p>
-			</mat-card-content>
-		</mat-card>
-	</mat-grid-list>
+	<mat-card *ngFor="let action of actions" class="action-card mat-elevation-z10">
+		<mat-card-header>
+
+			<mat-card-title [innerText]="action.id"></mat-card-title>
+
+		</mat-card-header>
+
+		<div class="logo-container">
+			<img class="logo-image" [src]="action.logoPath">
+		</div>
+
+		<mat-card-content>
+			<p [innerText]="action.description"></p>
+		</mat-card-content>
+
+		<mat-card-actions class="action-buttons">
+
+			<button mat-button class="mat-raised-button mat-primary" [routerLink]="['/actions', action.id]">
+				INSTALL
+			</button>
+
+		</mat-card-actions>
+
+	</mat-card>
 </ng-container>
 <ng-template #loadingTemplate>
 	data is loading

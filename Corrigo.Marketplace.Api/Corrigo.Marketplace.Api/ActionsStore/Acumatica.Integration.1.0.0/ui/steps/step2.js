@@ -1,11 +1,10 @@
-const btapSecondStepTemplate = document.createElement('template');
-btapSecondStepTemplate.innerHTML = `
-    <style>
-    	:host {
-			width: 100%;
-		}
+const acumaticaSecondStepTemplate = document.createElement('template');
+acumaticaSecondStepTemplate.innerHTML = `
+	<style>
 		div {
 			box-sizing: border-box;
+            width: 300px;
+            height: 100px;
             padding: 30px;  
 		}
 	</style>
@@ -16,14 +15,14 @@ btapSecondStepTemplate.innerHTML = `
 	    </label>
     </div>
   `;
-class BTAPSecondStep extends HTMLElement {
+class AcumaticaSecondStep extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
     }
 
     connectedCallback() {
-        const template = btapSecondStepTemplate.content.cloneNode(true);
+        const template = acumaticaSecondStepTemplate.content.cloneNode(true);
         const listenedElement = template.getElementById('email');
         listenedElement.addEventListener('change', event => {
             this.dispatchEvent(new CustomEvent('stepchange', {
@@ -39,6 +38,6 @@ class BTAPSecondStep extends HTMLElement {
     }
 }
 
-if (!window.customElements.get('btap-second-step')) {
-    window.customElements.define('btap-second-step', BTAPSecondStep);
+if (!window.customElements.get('acumatica-second-step')) {
+    window.customElements.define('acumatica-second-step', AcumaticaSecondStep);
 }

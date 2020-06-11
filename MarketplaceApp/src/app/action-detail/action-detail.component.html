@@ -1,2 +1,20 @@
 <div #stepsContainer></div>
-<button mat-raised-button color="primary" (click)="send()">Send data</button>
+<div class="example-action-buttons">
+	<button mat-button (click)="accordion.openAll()">Expand All</button>
+	<button mat-button (click)="accordion.closeAll()">Collapse All</button>
+</div>
+<ng-container *ngIf="(stepsConfig$ | async) as stepsConfig">
+	<mat-accordion class="example-headers-align" multi>
+		<mat-expansion-panel *ngFor="let step of stepsConfig.stepsDefinition" class="mat-elevation-z10">
+			<mat-expansion-panel-header>
+				<mat-panel-title [innerText]="step.stepCaption">
+				</mat-panel-title>
+			</mat-expansion-panel-header>
+			<app-web-component-wrapper [stepPath]="stepsConfig.stepPath" [elementName]="step.elementName"
+				[scriptName]="step.scriptName">
+			</app-web-component-wrapper>
+		</mat-expansion-panel>
+	</mat-accordion>
+</ng-container>
+
+<button mat-raised-button color="primary" class="send-button" (click)="send()">Send data</button>
