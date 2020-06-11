@@ -4,7 +4,7 @@
 
  node.js must be installed https://nodejs.org/en/download/
  
- also https certificate must be installed for kestrel web server
+ also https certificate must be installed for kestrel web server. You can use "dotnet dev-certs https --help" command
 
  In repository folder double click run-api.bat
 
