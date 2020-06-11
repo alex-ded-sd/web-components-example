@@ -3,6 +3,8 @@
 ## How to run:
 
  node.js must be installed https://nodejs.org/en/download/
+ 
+ also https certificate must be installed for kestrel web server
 
  In repository folder double click run-api.bat
 
