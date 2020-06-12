@@ -1,10 +1,5 @@
 const acumaticaFirstStepTeplate = document.createElement('template');
 acumaticaFirstStepTeplate.innerHTML = `
-	<style>
-		div {
-			margin-bottom: 20px;
-		}
-	</style>
 	<div class="first-step-wrapper">
 		<p>Please select your subscription:</p>
 		<input type="radio" id="free" name="subscription" value="free">
@@ -17,13 +12,12 @@ acumaticaFirstStepTeplate.innerHTML = `
 	    	<input id="company" type="text" name="company">
 	    </label>
     </div>
-	</div>
   `;
 
 class AcumaticaFirstStep extends HTMLElement {
 	constructor() {
 		super();
-		this.attachShadow({ mode: 'open' });
+		//this.attachShadow({ mode: 'open' });
 	}
 
 	connectedCallback() {
@@ -52,7 +46,7 @@ class AcumaticaFirstStep extends HTMLElement {
 				}
 			}));
 		});
-		this.shadowRoot.appendChild(template);
+		this.appendChild(template);
 	}
 }
 

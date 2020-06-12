@@ -1,13 +1,5 @@
 const acumaticaSecondStepTemplate = document.createElement('template');
 acumaticaSecondStepTemplate.innerHTML = `
-	<style>
-		div {
-			box-sizing: border-box;
-            width: 300px;
-            height: 100px;
-            padding: 30px;  
-		}
-	</style>
 	<div class="second-step-wrapper">
         <label>
             <label for="email">Email</label>
@@ -18,7 +10,7 @@ acumaticaSecondStepTemplate.innerHTML = `
 class AcumaticaSecondStep extends HTMLElement {
     constructor() {
         super();
-        this.attachShadow({ mode: 'open' });
+        // this.attachShadow({ mode: 'open' });
     }
 
     connectedCallback() {
@@ -34,7 +26,7 @@ class AcumaticaSecondStep extends HTMLElement {
                 }
             }));
         });
-        this.shadowRoot.appendChild(template);
+        this.appendChild(template);
     }
 }
 

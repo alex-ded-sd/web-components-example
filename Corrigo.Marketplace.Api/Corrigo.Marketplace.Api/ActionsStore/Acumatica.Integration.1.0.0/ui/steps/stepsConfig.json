@@ -1,11 +1,11 @@
 [
 	{
-		"stepCaption": "Please, provide your email",
+		"stepCaption": "Please, choose your subscription",
 		"scriptName": "step1.js",
 		"elementName": "acumatica-first-step"
 	},
 	{
-		"stepCaption": "Please, choose your subscription",
+		"stepCaption": "Please, provide your email",
 		"scriptName": "step2.js",
 		"elementName": "acumatica-second-step"
 	}
